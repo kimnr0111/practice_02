@@ -8,7 +8,7 @@ public class Ex12 {
 		// TODO Auto-generated method stub
 		char symbol;
 		double num1, num2, result = 0; 
-		int cheak_num = 0;
+		boolean cheak_result = true;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("출력되는 내용을 입력하세요");
 		System.out.print("기호: ");
@@ -27,15 +27,15 @@ public class Ex12 {
 		} else if(symbol == '/') {
 			if(num2 == 0) {
 				System.out.println("계산할 수 없습니다.");
-				cheak_num = 1;
+				cheak_result = false;
 			} else {
 				result = num1 / num2;
 			}
 		} else {
 			System.out.println("계산할 수 없는 기호입니다.");
-			cheak_num = 1;
+			cheak_result = false;
 		}
-		if(cheak_num == 0) {
+		if(cheak_result) {
 			System.out.println("결과는: " + result);
 		}
 	}
